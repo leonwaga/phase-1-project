@@ -74,7 +74,7 @@ startGame = () => {
 
 getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
-        localStorage.setItem('mostRecentScore", score)
+        localStorage.setItem("mostRecentScore", score)
         
         return window.localStorage.assign('/end.html')
         
@@ -82,7 +82,7 @@ getNewQuestion = () => {
 
     questionCounter++
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
-    progressBarFull.style.width = '$((questionCounter/MAX_QUESTIONS) + 10')%
+    progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS)* 100}%`
 
     const questionIndex = math.floor(Math.random() * availableQuestions.length)
     currentQuestion = availableQuestions[questionIndex]
@@ -100,7 +100,7 @@ getNewQuestion = () => {
 
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
-        if (!acceptingAnswers) { return 
+        if (!acceptingAnswers)  return 
 
         acceptingAnswers = false
         const selectedChoice = e.target
@@ -120,11 +120,11 @@ choices.forEach(choice => {
             selectedChoice.parentElement.classList.remove(classToApply)
             getNewQuestion()
 
-        }, 100)
+        }, 1000)
 
-    });
+    })
 
-});
+})
 
 
 incrementScoreButton = num => {
@@ -133,4 +133,4 @@ incrementScoreButton = num => {
 };
 
 
-startGame () => {
+startGame ()
