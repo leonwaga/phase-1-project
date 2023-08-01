@@ -126,6 +126,7 @@ choices.forEach(choice => {
 
 });
 
+
 incrementScoreButton = num => {
     score += num
     scoreText.innerText = score
