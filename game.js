@@ -51,19 +51,12 @@ let questions = [
     choice3:"",
     choice4:"",
     answer:"",
-},  
-{
-    question:"",
-    choice1:"",
-    choice2:"",
-    choice3:"",
-    choice4:"",
-    answer:"",
-} 
+}
+
 ] 
 
 const SCORE_POINTS = 10
-const MAX_QUESTIONS = 10
+const MAX_QUESTIONS = 6
 
 startGame = () => {
     questionCounter = 0
