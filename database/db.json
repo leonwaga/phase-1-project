@@ -1,0 +1,108 @@
+{
+  "quiz": [
+      { 
+        "question": "Which famous national park in Kenya is known for its annual wildebeest migration?",
+        "choices": [
+          {"choice_id": 1, "choice": "Amboseli National Park"},
+          {"choice_id": 2, "choice": "Maasai Mara National Reserve"},
+          {"choice_id": 3, "choice": "Tsavo National Park"},
+          {"choice_id": 4, "choice": "Nairobi National Park"}
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which Kenyan athlete is considered one of the greatest marathon runners of all time and set a world record at the 2019 Berlin Marathon?",
+        "choices": [
+          {"choice_id": 1, "choice": "Usain Bolt"},
+          {"choice_id": 2, "choice": "Haile Gebrselassie"},
+          {"choice_id": 3, "choice": "Eliud Kipchoge"},
+          {"choice_id": 4, "choice": "Mo Farah"}
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Which famous Kenyan author wrote the novel \"Petals of Blood\" and won the Nobel Prize in Literature in 2004?",
+        "choices": [
+          {"choice_id": 1, "choice": "Wole Soyinka"},
+          {"choice_id": 2, "choice": "Chinua Achebe"},
+          {"choice_id": 3, "choice": "Ngũgĩ wa Thiong'o"},
+          {"choice_id": 4, "choice": "Chimamanda Ngozi Adichie"}
+        ],
+        "answer": 3
+          },
+          {
+            "question": "What is the name of the Kenyan coastal town known for its stunning marine life and coral reefs, making it a popular diving and snorkeling destination?",
+            "choices": [
+              {"choice_id": 1, "choice": "Lamu"},
+              {"choice_id": 2, "choice": "Watamu"},
+              {"choice_id": 3, "choice": "Malindi"},
+              {"choice_id": 4, "choice": "Kilifi"}
+            ],
+            "answer": 2
+          },
+          {
+            "question": "Which major event, held annually in Kenya, showcases a week-long celebration of Maasai culture, featuring traditional dances, ceremonies, and competitions?",
+            "choices": [
+              {"choice_id": 1, "choice": "Narok Cultural Festival"},
+              {"choice_id": 2, "choice": "Watamu Cultural Festival"},
+              {"choice_id": 3, "choice": "Maasai Mara Cultural Festival"},
+              {"choice_id": 4, "choice": "Lewa Cultural Festival"}
+            ],
+            "answer": 3
+          },
+          {
+            "question": "Kenya is known for its coffee production. What is the name of the region in Kenya that produces some of the world's finest coffee beans?",
+            "choices": [
+              {"choice_id": 1, "choice": "Nairobi"},
+              {"choice_id": 2, "choice": "Nyeri"},
+              {"choice_id": 3, "choice": "Kisumu"},
+              {"choice_id": 4, "choice": "Kericho"}
+            ],
+            "answer": 2
+          },
+          {
+            "question": "Which famous archaeological site in Kenya, also known as the Cradle of Humankind has yielded many early human fossils and contributed significantly to the understanding of human evolution?",
+            "choices": [
+              {"choice_id": 1, "choice": "Turkana Basin"},
+              {"choice_id": 2, "choice": "Olduvai Gorge"},
+              {"choice_id": 3, "choice": "Koobi Fora"},
+              {"choice_id": 4, "choice": "Laetoli"}
+            ],
+            "answer": 3
+          },
+          {
+            "question": "Which famous Kenyan marathoner, known as the Pride of Africa won the women's marathon at the 2007 World Championships in Athletics and the 2008 Olympic Games?",
+            "choices": [  
+              {"choice_id": 1, "choice": "Tegla Loroupe"},
+              {"choice_id": 2, "choice": "Mary Keitany"},
+              {"choice_id": 3, "choice": "Catherine Ndereba"},
+              {"choice_id": 4, "choice": "Rita Jeptoo"}
+            ],
+            "answer": 3
+          },
+          {
+            "question": "Which Kenyan national park is famous for its vibrant population of pink flamingos and is also a designated UNESCO World Heritage Site?",
+            "choices": [
+              {"choice_id": 1, "choice": "Nairobi National Park"},
+              {"choice_id": 2, "choice": "Lake Nakuru National Park"},
+              {"choice_id": 3, "choice": "Tsavo National Park"},
+              {"choice_id": 4, "choice": "Amboseli National Park"}
+            ],
+            "answer": 2
+          },
+          {
+            "question": "What is the name of the famous ancient archaeological site in Kenya known for its mysterious stone pillars and thought to have been an astronomical observatory?",
+            "choices": [
+              {"choice_id": 1, "choice": "Lamu Old Town"},
+              {"choice_id": 2, "choice": "Gedi Ruins"},
+              {"choice_id": 3, "choice": "Pillars of Kalokol"},
+              {"choice_id": 4, "choice": "Namoratunga"}
+            ],
+            "answer": 4
+          }
+        ]
+}
+      
+    
+  
+  
