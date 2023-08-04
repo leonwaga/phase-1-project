@@ -7,9 +7,9 @@ This project is a multiple choice quiz designed to educate users on the history 
 
 Installation
 
-1. Begin by cloning the repository:
-2. Install the required dependencies: `npm install`
-3. Start the development server
+1. Begin by cloning the repository.
+2. Install the required dependencies.
+3. Start the development server.
 
 Usage
 
