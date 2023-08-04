@@ -1,7 +1,7 @@
-
 //Wait for the DOM to be fully loaded before executing the code
 document.addEventListener("DOMContentLoaded", function () {
     const API_URL = 'http://localhost:3000/quiz';
+    let questions = []
 // Function to fetch questions from the server
     async function fetchQuestionsFromServer() {
  try {
@@ -96,10 +96,12 @@ document.addEventListener("DOMContentLoaded", function () {
         scoreText.innerText = score
     }
 // Call the fetchQuestionsFromServer() function to fetch questions before starting the game
-    fetchQuestionsFromServer() .then(data => {
-        questions = data.quiz;
-        startGame();
-    });
+    fetchQuestionsFromServer() 
+        .then(questionsData => {
+          questions = questionsData;
+          startGame();
+    })
+    .catch(error => console.log(error));
 });
 
 
