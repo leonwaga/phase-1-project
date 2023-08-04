@@ -7,8 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function fetchQuestionsFromServer() {
     fetch(API_URL)
       .then(response => response.json())
-      .then(data => {
-        questions = data.quiz;
+      .then(data => { questions = data.quiz;
         startGame();
       })
       .catch(error => console.log(error));
