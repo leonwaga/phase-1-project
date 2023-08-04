@@ -1,5 +1,6 @@
 # phase-1-project
 
+Author: Leon Waga
 Project Name: Phase-1-Project
 
 This project is a multiple choice quiz designed to educate users on the history and facts about kenya through an interactive web application.
@@ -23,4 +24,3 @@ Contributing
 2. Create a new branch with a descriptive name.
 3. Make your changes and commit them.
 4. push the changes to your fork.
-submit a pull request to the original repository.

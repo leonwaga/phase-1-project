@@ -1,35 +1,34 @@
 
 //Wait for the DOM to be fully loaded before executing the code
 document.addEventListener("DOMContentLoaded", function () {
-
     const API_URL = 'http://localhost:3000/quiz';
 // Function to fetch questions from the server
 function fetchQuestionsFromServer() {
-    fetch(API_URL)
+ return fetch('http://localhost:3000/quiz')
       .then(response => response.json())
-      .then(data => { questions = data.quiz;
-        startGame();
-      })
-      .catch(error => console.log(error));
-  }
+
+      .catch(error => console.log(error)); 
+}
  // Get references to HTML elements
     const question = document.querySelector('#question');
     const choices = Array.from(document.querySelectorAll('.choice-text'));
     const progressText = document.querySelector('#progressText');
     const scoreText = document.querySelector('#score');
     const progressBarFull = document.querySelector('#progressBarFull');
+     
  // Create variables to store the current question and game state
     let currentQuestion = {}
     let acceptingAnswers = true
     let score = 0;
     let questionCounter = 0;
     let availableQuestions = [];
+
 // Constants for scoring and number of questions
     const SCORE_POINTS = 10
     const MAX_QUESTIONS = 10
 
 // Function to start game
-    function startGame () {
+    function startGame() {
     questionCounter = 0
     score = 0
     availableQuestions = [...questions]
@@ -39,7 +38,6 @@ function fetchQuestionsFromServer() {
     function getNewQuestion() {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem("mostRecentScore", score)
-        
         return window.location.assign('/end.html');
         }
 // Increment question counter and update progress bar
@@ -51,7 +49,7 @@ function fetchQuestionsFromServer() {
     currentQuestion = availableQuestions[questionIndex]
     question.innerText = currentQuestion.question
 // Display choices for the current question
-    choice.forEach(choice => {
+    choices.forEach(choice => {
         const number = choice.dataset["number"]
         choice.innerText = currentQuestion[`choice${number}`];
     })
@@ -63,6 +61,7 @@ function fetchQuestionsFromServer() {
 // Display choices for the current question and add click event listners to each choice
     choices.forEach(choice => {
         choice.addEventListener('click', e => {
+            e.preventDefault();
          if (!acceptingAnswers)  return 
 
         acceptingAnswers = false
@@ -79,7 +78,7 @@ function fetchQuestionsFromServer() {
 // Add the class to show the result (correct or incorrect) and wait for 1 second before showing the next question
         selectedChoice.parentElement.classList.add(classToApply)
             setTimeout(() => {
-//Remove the reult class and get a new question
+
                 selectedChoice.parentElement.classList.remove(classToApply)
             getNewQuestion()
 
@@ -88,12 +87,16 @@ function fetchQuestionsFromServer() {
         })
     })
 
-// Function to increment the score
+// Create function to increment the score
     incrementScore = num => {
         score += num
         scoreText.innerText = score
     }
-
+// Call the fetchQuestionsFromServer() function to fetch questions before starting the game
+    fetchQuestionsFromServer() .then(data => {
+        questions = data.quiz;
+        startGame();
+    });
 });
 
 

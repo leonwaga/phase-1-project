@@ -1,0 +1,15 @@
+body {
+    color: #fff;
+}
+
+
+
+#highscoresList {
+    list-style: none;
+    margin-bottom: 60px;
+}
+
+.high-score{
+    font-size: 60px;
+    margin-bottom: 10px;
+}
