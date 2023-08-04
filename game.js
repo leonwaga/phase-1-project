@@ -1,9 +1,19 @@
 
 //Wait for the DOM to be fully loaded before executing the code
 document.addEventListener("DOMContentLoaded", function () {
-// The URL of the API endpoint to fetch the quiz questions
+
     const API_URL = 'http://localhost:3000/quiz';
-// Get references to HTML elements
+// Function to fetch questions from the server
+function fetchQuestionsFromServer() {
+    fetch(API_URL)
+      .then(response => response.json())
+      .then(data => {
+        questions = data.quiz;
+        startGame();
+      })
+      .catch(error => console.log(error));
+  }
+ // Get references to HTML elements
     const question = document.querySelector('#question');
     const choices = Array.from(document.querySelectorAll('.choice-text'));
     const progressText = document.querySelector('#progressText');
@@ -18,16 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Constants for scoring and number of questions
     const SCORE_POINTS = 10
     const MAX_QUESTIONS = 10
-// Function to fetch questions from the server
-    function fetchQuestionsFromServer() {
-    fetch(API_URL)
-      .then(response => response.json())
-      .then(data => {
-        questions = data.quiz;
-        startGame();
-      })
-      .catch(error => console.log(error));
-  }
+
 // Function to start game
     function startGame () {
     questionCounter = 0

@@ -4,8 +4,8 @@ body {
 
 .choice-container {
     display: flex;
-    margin-bottom: 60px;
-    width: 50%;
+    margin-bottom: 20px;
+    width: 100%;
     border-radius: 4px;
     background: rgb(18, 93, 255);
     font-size: 60px;
@@ -27,7 +27,6 @@ body {
 .choice-text {
     padding: 40px;
     width: 100%;
-    font-size: 50px;
 }
 
 .correct {
@@ -38,13 +37,12 @@ body {
     background: linear-gradient( 32deg, rgba(230, 29, 29, 1) 0%, rgba(224, 11, 11, 1) 100%);
 }
 
-.hud-item {
+#hud {
     display: flex;
     justify-content: space-between;
-    
 }
 
-#hud-prefix {
+.hud-prefix {
     text-align: center;
     font-size: 40px;
 }
@@ -70,7 +68,7 @@ body {
 }
  @media screen and (max-width: 768px) {
     .choice-container {
-        min-width: 120px;
+        min-width: 220px;
     }
  }
 
