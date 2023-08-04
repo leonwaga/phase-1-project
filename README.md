@@ -9,7 +9,7 @@ Installation
 
 1. Begin by cloning the repository.
 2. Install the required dependencies.
-3. Start the development server.
+3. Start the development server
 
 Usage
 

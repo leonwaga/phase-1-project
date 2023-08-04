@@ -3,12 +3,15 @@
 document.addEventListener("DOMContentLoaded", function () {
     const API_URL = 'http://localhost:3000/quiz';
 // Function to fetch questions from the server
-function fetchQuestionsFromServer() {
- return fetch('http://localhost:3000/quiz')
-      .then(response => response.json())
-
-      .catch(error => console.log(error)); 
-}
+    async function fetchQuestionsFromServer() {
+ try {
+        const response = await fetch('http://localhost:3000/quiz');
+        const data = await response.json();
+        return console.log(data);
+    } catch (error) {
+        return console.log(error);
+    }
+};
  // Get references to HTML elements
     const question = document.querySelector('#question');
     const choices = Array.from(document.querySelectorAll('.choice-text'));
